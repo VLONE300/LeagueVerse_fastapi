@@ -1,17 +1,14 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
 class LeagueBase(BaseModel):
     name: str
-    logo_path: str
-
-
-class LeagueCreate(LeagueBase):
-    pass
+    logo_path: Optional[str]
 
 
 class League(LeagueBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

@@ -5,6 +5,7 @@ from config import DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASS
 from src.database import Base
 from src.core.models import *
 from src.nba.models import *
+from src.mls.models import *
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
